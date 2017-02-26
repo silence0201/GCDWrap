@@ -47,4 +47,9 @@
  */
 - (instancetype)initWithDispatchQueue:(dispatch_queue_t)dispatchQueue;
 
+#pragma mark --- Main
+
+/// 是否是主队列
++ (BOOL)isMainQueue ;
+
 @end
