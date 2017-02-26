@@ -10,29 +10,31 @@
 
 @interface SIQueue : NSObject
 
+#pragma mark --- Meta
+
 @property (nonatomic,strong,readonly) dispatch_queue_t metaQueue ; ///> 队列原始信息
 
 #pragma mark --- Init
 
-/// 获取主队列,相当于dispatch_get_main_queue()
+/// 获取主队列 >> dispatch_get_main_queue()
 + (instancetype)mainQueue ;
 
-/// 获取全局队列,相当于dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
+/// 获取全局队列 >> dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
 + (instancetype)globalQueue ;
 
-/// 获取低优先级队列,相当于dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0)
+/// 获取低优先级队列 >> dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0)
 + (instancetype)lowPriorityGlobalQueue ;
 
-/// 获取background队列,相当于dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0)
+/// 获取background队列 >> dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0)
 + (instancetype)backgroundPriorityGlobalQueue ;
 
-/// 获取高优先级队列,相当于dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0)]
+/// 获取高优先级队列 >> dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0)]
 + (instancetype)highPriorityGlobalQueue ;
 
-/// 串行队列,相当于dispatch_queue_create(nil, DISPATCH_QUEUE_SERIAL)
+/// 串行队列 >> dispatch_queue_create(nil, DISPATCH_QUEUE_SERIAL)
 + (instancetype)serialQueue ;
 
-/// 并发队列,相当于dispatch_queue_create(nil, DISPATCH_QUEUE_CONCURRENT)
+/// 并发队列 >> dispatch_queue_create(nil, DISPATCH_QUEUE_CONCURRENT)
 + (instancetype)concurrentQueue ;
 
 /// 默认创建串行队列

@@ -11,6 +11,7 @@
 		E82855B91E62EB40009E738C /* GCDWrapTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E82855B81E62EB40009E738C /* GCDWrapTest.m */; };
 		E82855BB1E62EB40009E738C /* libGCDWrap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E82855A61E62EAE7009E738C /* libGCDWrap.a */; };
 		E82855C31E62EB86009E738C /* SIQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = E82855C21E62EB86009E738C /* SIQueue.m */; };
+		E82855EF1E630CA3009E738C /* SIGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = E82855EE1E630CA3009E738C /* SIGroup.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,8 @@
 		E82855BA1E62EB40009E738C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E82855C11E62EB86009E738C /* SIQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIQueue.h; sourceTree = "<group>"; };
 		E82855C21E62EB86009E738C /* SIQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIQueue.m; sourceTree = "<group>"; };
+		E82855ED1E630CA3009E738C /* SIGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIGroup.h; sourceTree = "<group>"; };
+		E82855EE1E630CA3009E738C /* SIGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SIGroup.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 				E82855A91E62EAE7009E738C /* GCDWrap.h */,
 				E82855C11E62EB86009E738C /* SIQueue.h */,
 				E82855C21E62EB86009E738C /* SIQueue.m */,
+				E82855ED1E630CA3009E738C /* SIGroup.h */,
+				E82855EE1E630CA3009E738C /* SIGroup.m */,
 			);
 			path = GCDWrap;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E82855C31E62EB86009E738C /* SIQueue.m in Sources */,
+				E82855EF1E630CA3009E738C /* SIGroup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
