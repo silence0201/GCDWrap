@@ -7,3 +7,6 @@
 //
 
 #import "SIQueue.h"
+#import "SIGroup.h"
+#import "SISemaphore.h"
+#import "SIMacro.h"

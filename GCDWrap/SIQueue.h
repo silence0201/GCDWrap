@@ -13,7 +13,7 @@
 
 #pragma mark --- Meta
 
-@property (nonatomic,strong,readonly) dispatch_queue_t metaQueue ; ///> 队列原始信息
+@property (nonatomic,strong,readonly) dispatch_queue_t metaQueue ; ///> 原始队列原始信息
 
 #pragma mark --- Init
 
