@@ -7,6 +7,7 @@
 //
 
 #import "SIQueue.h"
+#import "SIGroup.h"
 
 static SIQueue *mainQueue;
 static SIQueue *globalQueue;
@@ -96,6 +97,16 @@ static uint8_t mainQueueMarker[] = {0};
 
 - (void)syncBarrierBlock:(dispatch_block_t)block{
     dispatch_barrier_sync(_metaQueue, block) ;
+}
+
+#pragma mark --- Group
+
+- (void)asyncBlock:(dispatch_block_t)block inGroup:(SIGroup *)group{
+    dispatch_group_async(group.metaGroup, _metaQueue, block) ;
+}
+
+- (void)notifyBlock:(dispatch_block_t)block inGroup:(SIGroup *)group{
+    dispatch_group_notify(group.metaGroup, _metaQueue, block) ;
 }
 
 #pragma mark -- suspend / resume

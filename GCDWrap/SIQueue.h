@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+@class SIGroup ;
 @interface SIQueue : NSObject
 
 #pragma mark --- Meta
@@ -63,6 +64,15 @@
 
 /// 同步栅栏函数,相当于dispatch_barrier_async
 - (void)syncBarrierBlock:(dispatch_block_t)block ;
+
+#pragma mark --- Group
+
+/// Block in Group >> dispatch_group_async()
+- (void)asyncBlock:(dispatch_block_t)block inGroup:(SIGroup *)group ;
+
+/// Group Notify >> dispatch_group_notify()
+- (void)notifyBlock:(dispatch_block_t)block inGroup:(SIGroup *)group ;
+
 
 #pragma mark -- suspend / resume
 
