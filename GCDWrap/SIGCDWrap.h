@@ -10,3 +10,4 @@
 #import "SIGroup.h"
 #import "SISemaphore.h"
 #import "SIMacro.h"
+#import "SITimer.h"

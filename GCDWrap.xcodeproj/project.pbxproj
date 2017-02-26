@@ -7,16 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E82855AC1E62EAE7009E738C /* GCDWrap.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E82855A91E62EAE7009E738C /* GCDWrap.h */; };
+		E82855AC1E62EAE7009E738C /* SIGCDWrap.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E82855A91E62EAE7009E738C /* SIGCDWrap.h */; };
 		E82855B91E62EB40009E738C /* GCDWrapTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E82855B81E62EB40009E738C /* GCDWrapTest.m */; };
 		E82855BB1E62EB40009E738C /* libGCDWrap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E82855A61E62EAE7009E738C /* libGCDWrap.a */; };
 		E82855C31E62EB86009E738C /* SIQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = E82855C21E62EB86009E738C /* SIQueue.m */; };
 		E82855EF1E630CA3009E738C /* SIGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = E82855EE1E630CA3009E738C /* SIGroup.m */; };
 		E82855F21E63158F009E738C /* SISemaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = E82855F11E63158F009E738C /* SISemaphore.m */; };
-		E82855F71E631E08009E738C /* GCDWrap.h in Headers */ = {isa = PBXBuildFile; fileRef = E82855A91E62EAE7009E738C /* GCDWrap.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E82855F71E631E08009E738C /* SIGCDWrap.h in Headers */ = {isa = PBXBuildFile; fileRef = E82855A91E62EAE7009E738C /* SIGCDWrap.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E82855F81E631E12009E738C /* SIQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = E82855C11E62EB86009E738C /* SIQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E82855F91E631E17009E738C /* SISemaphore.h in Headers */ = {isa = PBXBuildFile; fileRef = E82855F01E63158F009E738C /* SISemaphore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E82855FA1E631E1A009E738C /* SIMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = E82855F31E631AFA009E738C /* SIMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E82855FD1E632390009E738C /* SITimer.h in Headers */ = {isa = PBXBuildFile; fileRef = E82855FB1E632390009E738C /* SITimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E82855FE1E632390009E738C /* SITimer.m in Sources */ = {isa = PBXBuildFile; fileRef = E82855FC1E632390009E738C /* SITimer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				E82855AC1E62EAE7009E738C /* GCDWrap.h in CopyFiles */,
+				E82855AC1E62EAE7009E738C /* SIGCDWrap.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,7 +46,7 @@
 
 /* Begin PBXFileReference section */
 		E82855A61E62EAE7009E738C /* libGCDWrap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGCDWrap.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		E82855A91E62EAE7009E738C /* GCDWrap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDWrap.h; sourceTree = "<group>"; };
+		E82855A91E62EAE7009E738C /* SIGCDWrap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SIGCDWrap.h; sourceTree = "<group>"; };
 		E82855B61E62EB40009E738C /* GCDWrapTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GCDWrapTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E82855B81E62EB40009E738C /* GCDWrapTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDWrapTest.m; sourceTree = "<group>"; };
 		E82855BA1E62EB40009E738C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,6 +57,8 @@
 		E82855F01E63158F009E738C /* SISemaphore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SISemaphore.h; sourceTree = "<group>"; };
 		E82855F11E63158F009E738C /* SISemaphore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SISemaphore.m; sourceTree = "<group>"; };
 		E82855F31E631AFA009E738C /* SIMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SIMacro.h; sourceTree = "<group>"; };
+		E82855FB1E632390009E738C /* SITimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SITimer.h; sourceTree = "<group>"; };
+		E82855FC1E632390009E738C /* SITimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SITimer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +101,7 @@
 		E82855A81E62EAE7009E738C /* GCDWrap */ = {
 			isa = PBXGroup;
 			children = (
-				E82855A91E62EAE7009E738C /* GCDWrap.h */,
+				E82855A91E62EAE7009E738C /* SIGCDWrap.h */,
 				E82855C11E62EB86009E738C /* SIQueue.h */,
 				E82855C21E62EB86009E738C /* SIQueue.m */,
 				E82855ED1E630CA3009E738C /* SIGroup.h */,
@@ -105,6 +109,8 @@
 				E82855F01E63158F009E738C /* SISemaphore.h */,
 				E82855F11E63158F009E738C /* SISemaphore.m */,
 				E82855F31E631AFA009E738C /* SIMacro.h */,
+				E82855FB1E632390009E738C /* SITimer.h */,
+				E82855FC1E632390009E738C /* SITimer.m */,
 			);
 			path = GCDWrap;
 			sourceTree = "<group>";
@@ -125,8 +131,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E82855F71E631E08009E738C /* GCDWrap.h in Headers */,
+				E82855F71E631E08009E738C /* SIGCDWrap.h in Headers */,
 				E82855FA1E631E1A009E738C /* SIMacro.h in Headers */,
+				E82855FD1E632390009E738C /* SITimer.h in Headers */,
 				E82855F91E631E17009E738C /* SISemaphore.h in Headers */,
 				E82855F81E631E12009E738C /* SIQueue.h in Headers */,
 			);
@@ -225,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E82855C31E62EB86009E738C /* SIQueue.m in Sources */,
+				E82855FE1E632390009E738C /* SITimer.m in Sources */,
 				E82855F21E63158F009E738C /* SISemaphore.m in Sources */,
 				E82855EF1E630CA3009E738C /* SIGroup.m in Sources */,
 			);
@@ -398,6 +406,7 @@
 				E82855B11E62EAE7009E738C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E82855BE1E62EB40009E738C /* Build configuration list for PBXNativeTarget "GCDWrapTest" */ = {
 			isa = XCConfigurationList;
@@ -406,6 +415,7 @@
 				E82855C01E62EB40009E738C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
