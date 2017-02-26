@@ -39,17 +39,48 @@
 - (instancetype)init;
 
 
-/**
- 通过dispatch_queue_t对象初始对象
-
- @param dispatchQueue A dispatch_queue_t object
- @return SIQueue Object
- */
+/// 通过dispatch_queue_t对象初始对象
 - (instancetype)initWithDispatchQueue:(dispatch_queue_t)dispatchQueue;
+
+#pragma mark --- Block
+
+/// 同步执行,相当于dispatch_sync()
+- (void)syncBlock:(dispatch_block_t)block ;
+
+/// 异步执行,相当于dispatch_async()
+- (void)asyncBlock:(dispatch_block_t)block ;
+
+/// 在指定时间后异步执行,相当于dispatch_after()
+- (void)afterBlock:(dispatch_block_t)block delay:(NSTimeInterval)seconds ;
+
+/// 提交一个block块到一个分发的队里,以供多次调用,相当于dispatch_apply()
+- (void)applyBlock:(void (^)(size_t))block iterationCount:(size_t)count ;
+
+/// 异步栅栏函数,相当于dispatch_barrier_async
+- (void)asyncBarrierBlock:(dispatch_block_t)block ;
+
+/// 同步栅栏函数,相当于dispatch_barrier_async
+- (void)syncBarrierBlock:(dispatch_block_t)block ;
+
+#pragma mark -- suspend / resume
+
+/// suspend >> dispatch_suspend()
+- (void)suspend ;
+
+/// resume >> dispatch_resume()
+- (void)resume ;
 
 #pragma mark --- Main
 
-/// 是否是主队列
+/// 当前是否是主队列
 + (BOOL)isMainQueue ;
+
+#pragma mark --- Context Associated
+
+/// 返回context associated,相当于dispatch_get_specific()
+- (void *)contextForKey:(const void *)key;
+
+/// 设置context associated,相当于dispatch_queue_set_specific()
+- (void)setContext:(void *)context forKey:(const void *)key;
 
 @end

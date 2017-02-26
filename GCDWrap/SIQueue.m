@@ -72,15 +72,56 @@ static uint8_t mainQueueMarker[] = {0};
     return [[self alloc]initWithDispatchQueue:dispatch_queue_create(nil, DISPATCH_QUEUE_CONCURRENT)] ;
 }
 
+#pragma mark --- Block
+
+- (void)syncBlock:(dispatch_block_t)block{
+    dispatch_sync(_metaQueue, block) ;
+}
+
+- (void)asyncBlock:(dispatch_block_t)block{
+    dispatch_async(_metaQueue, block) ;
+}
+
+- (void)afterBlock:(dispatch_block_t)block delay:(NSTimeInterval)seconds{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (seconds * NSEC_PER_SEC)),_metaQueue, block);
+}
+
+- (void)applyBlock:(void (^)(size_t))block iterationCount:(size_t)count{
+    dispatch_apply(count, _metaQueue, block) ;
+}
+
+- (void)asyncBarrierBlock:(dispatch_block_t)block{
+    dispatch_barrier_async(_metaQueue, block) ;
+}
+
+- (void)syncBarrierBlock:(dispatch_block_t)block{
+    dispatch_barrier_sync(_metaQueue, block) ;
+}
+
+#pragma mark -- suspend / resume
+
+- (void)suspend{
+    dispatch_suspend(_metaQueue) ;
+}
+
+- (void)resume{
+    dispatch_suspend(_metaQueue) ;
+}
+
 #pragma mark --- Main
 
 + (BOOL)isMainQueue{
     return dispatch_get_specific(mainQueueMarker) == mainQueueMarker ;
 }
 
-#pragma mark -- Private
+#pragma mark -- Context Associated
+
 - (void)setContext:(void *)context forKey:(const void *)key {
     dispatch_queue_set_specific(_metaQueue, key, context, NULL);
+}
+
+- (void *)contextForKey:(const void *)key{
+    return dispatch_get_specific(key); ;
 }
 
 @end
