@@ -43,7 +43,21 @@
 }
 
 - (void)start{
+    if(_isRuning ) return ;
     dispatch_resume(_metaSource);
+    _isRuning = YES ;
+}
+
+- (void)resume{
+    if(_isRuning) return ;
+    dispatch_resume(_metaSource);
+    _isRuning = YES ;
+}
+
+- (void)pause{
+    if (!_isRuning)  return ;
+    dispatch_suspend(_metaSource);
+    _isRuning = NO ;
 }
 
 - (void)destroy{

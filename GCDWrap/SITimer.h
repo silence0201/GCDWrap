@@ -15,6 +15,8 @@
 
 @property (nonatomic,strong,readonly) dispatch_source_t metaSource ;  ///> 原始Source
 
+@property (nonatomic,assign) BOOL isRuning ; ///> 定时器是否在运行
+
 #pragma mark --- Init
 
 /// 在全局队列初始化 >> dispatch_source_create
@@ -41,6 +43,12 @@
 
 /// start >> dispatch_resume
 - (void)start;
+
+/// resume >> dispatch_resume
+- (void)resume;
+
+/// pause >> dispatch_suspend
+- (void)pause;
 
 /// destroy >> dispatch_source_cancel
 - (void)destroy;
